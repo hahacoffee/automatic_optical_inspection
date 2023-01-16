@@ -1,0 +1,17 @@
+clc()
+import cv2
+
+fig=figure(1,rows=2,cols=2)
+src=dataObject()
+filter("loadAnyImage",src,"lena.jpg")
+gray=dataObject();gray1=dataObject()
+filter("cvCvtColor",src,gray,7)
+filter("saveJPG",gray,'testimg.jpg','gray')
+img=cv2.imread('testimg.jpg',0)
+edges=cv2.Canny(img,100,180)
+fig.plot(img,areaIndex=0)
+fig.plot(edges,areaIndex=1)
+edge=dataObject()
+filter("cvCannyEdge",gray, edge,10,20)
+fig.plot(src,areaIndex=2)
+fig.plot(edge,areaIndex=3)

@@ -1,0 +1,6 @@
+clc()
+src=dataObject()
+filter("loadAnyImage",src,'PIC.jpg') 
+src_gray=dataObject()
+filter("cvCvtColor",src,src_gray,6) 
+plot(src_gray)

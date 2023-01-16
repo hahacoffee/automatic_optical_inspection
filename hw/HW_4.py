@@ -1,0 +1,15 @@
+
+import numpy as np
+g0=np.loadtxt('g0t.txt')
+g1=np.loadtxt('g1t.txt')
+g2=np.loadtxt('g2t.txt')
+g3=np.loadtxt('g3t.txt')
+g4=np.loadtxt('g4t.txt')
+g5=np.loadtxt('g5t.txt')
+t=np.array([1,-2,1])
+gt0=np.convolve(g0,t)
+gt1=np.convolve(g1,t)
+gt2=np.convolve(g2,t)
+gt3=np.convolve(g3,t)
+gt4=np.convolve(g4,t)
+gt5=np.convolve(g5,t)
